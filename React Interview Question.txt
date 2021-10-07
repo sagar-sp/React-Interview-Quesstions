@@ -1,0 +1,183 @@
+
+                                               MYSELF STRUCTURE
+
+(KEEP IT SHORT KEEP IT SIMPLE)
+
+ Hello, my name is Sagar Patil. (Optional - I’m from Pune.).
+ I Completed BSc in Computer Science from Pune university (Optional - in 2020).
+Being a computer student, I am passionate about learning new programming languages and currently, I am good at JavaScript. So I completed “MERN (Optional MEAN) Stack” which consists of MongoDB, Express.js, React.js (Optional Angular), Node.js which is used for building dynamic websites and web applications.
+I’ve made projects using MERN stack such as iNoteBook App, News Monkey App, Expense Tracker App(Static App).
+I also made a chat web application using firebase as the backend which googles service.
+Well, I have Completed My Intership in Angular in that internship I am Work on mydukandar project it is a E-commerce Platform. now I'm looking forward to leveraging everything I learned and get hands-on experience React.
+
+Thanks for giving me the opportunity to introduce myself. 
+
+
+
+OOPS Concepts In JS
+1. Object  
+	 An Object is a unique entity which contains property and methods. For example “car” is a real life Object, which have some characteristics like color, type, model, horsepower and performs certain action like drive. The characteristics of an Object are called as Property, in Object Oriented Programming and the actions are called methods. An Object is an instance of a class. Objects are everywhere in JavaScript almost every element is an Object whether it is a function,arrays and string.
+Example Object 
+//Defining object
+let person = {
+first_name:'Sagar',
+last_name: 'Patil',
+
+//method
+getFunction : function(){
+return (`The name of the person is
+${person.first_name} ${person.last_name}`)
+},
+//object within object
+phone_number : {
+mobile:'12345',
+landline:'6789'
+}
+}
+console.log(person.getFunction());
+console.log(person.phone_number.landline);
+
+
+2.Class
+Classes are blueprint of an Object. A class can have many Object, because class is a template while Object are instances of the class or the concrete implementation.
+Example Class 
+// Defining class using es6
+class Vehicle {
+constructor(name, maker, engine) {
+this.name = name;
+this.maker =  maker;
+this.engine = engine;
+}
+getDetails(){
+return (`The name of the bike is ${this.name}.`)
+}
+}
+// Making object with the help of the constructor
+let bike1 = new Vehicle('Hayabusa', 'Suzuki', '1340cc');
+let bike2 = new Vehicle('Ninja', 'Kawasaki', '998cc');
+
+console.log(bike1.name);    // Hayabusa
+console.log(bike2.maker);   // Kawasaki
+console.log(bike1.getDetails());
+
+
+3. Encapsulation
+	Binding Characteristics(data, variables) and behavior(methods, function) together is called as class.
+Example Encapsulation 
+//encapsulation example
+class person{
+constructor(name,id){
+this.name = name;
+this.id = id;
+}
+add_Address(add){
+this.add = add;
+}
+getDetails(){
+console.log(`Name is ${this.name},Address is: ${this.add}`);
+}
+}
+
+let person1 = new person('Mukul',21);
+person1.add_Address('Delhi');
+person1.getDetails();
+
+
+4. Abstraction
+	Hiding Something(anything ex :- Characteristics, behavior, Implementation details) from the Outside World is called as Abstraction.
+Example Abstraction 
+// Abstraction example
+function person(fname,lname){
+let firstname = fname;
+let lastname = lname;
+
+let getDetails_noaccess = function(){
+return (`First name is: ${firstname} Last
+name is: ${lastname}`);
+}
+
+this.getDetails_access = function(){
+return (`First name is: ${firstname}, Last
+name is: ${lastname}`);
+}
+}
+let person1 = new person('Mukul','Latiyan');
+console.log(person1.firstname);
+console.log(person1.getDetails_noaccess);
+console.log(person1.getDetails_access());
+
+
+5. Inheritance (Reusablility)
+	 It is a concept in which some property and methods of an Object is being used by another Object. Unlike most of the OOP languages where classes inherit classes, JavaScript Object inherits Object i.e. certain features (property and methods)of one object can be reused by other Objects. 
+Example Inheritance 
+//Inhertiance example
+class person{
+constructor(name){
+this.name = name;
+}
+//method to return the string
+toString(){
+return (`Name of person: ${this.name}`);
+}
+}
+class student extends person{
+constructor(name,id){
+//super keyword to for calling above class constructor
+super(name);
+this.id = id;
+}
+toString(){
+return (`${super.toString()},Student ID: ${this.id}`);
+}
+}
+let student1 = new student('Mukul',22);
+console.log(student1.toString());
+
+
+5. Polymorphism
+Single Name And Multiple Behaviours is called as Polymorphism
+
+
+React Interview Questions
+Q1: How does React work?
+ React uses virtual DOM to render the view. As the name suggests, virtual DOM is a virtual representation of the real DOM. Each time the data changes in a react app, a new virtual DOM gets created. Creating a virtual DOM is much faster than rendering the UI inside the browser. Therefore, with the use of virtual DOM, the efficiency of the app improves.
+
+Q2: What are the advantages of ReactJS? 
+ 1. Increases the application’s performance with Virtual DOM.
+  2. JSX makes code is easy to read and write.
+  3. Easy to integrate with other frameworks (Angular, BackboneJS) since it is only a          view library.
+  4.Reusable components : -React uses component-based architecture for developing applications. Components are independent and reusable bits of code. These components can be shared across various applications having similar functionality. The re-use of components increases the pace of development.
+
+Q.3: What is jsx?
+  JSX stands for JavaScript XML.
+It allows us to write HTML inside JavaScript and place them in the DOM without using functions like appendChild( ) or createElement( ). 
+*Some Points to remember while using JSX :-  You have to write ‘ClassName’ instead of ‘Class’ as class is the reserved keyword in Javascript. In place of ‘For’ you have to use ‘htmlFor’(not htmlfor).
+
+Q4:What is jsx fragment feature?
+ With return() we can return only one tag or Element. If you want to return two elements using JSX you have to use the JSX Fragment Feature or wrap the whole content in one element.
+
+Q5:What is Props?
+  Props stand for Properties. It is used to Pass information into the React Components. For example, if we create a custom Component, then by using Props, we can pass data into it in the form of Objects, strings, numbers, etc.
+
+Q6:What is State?
+ A state store the local information of a Component. For example: If we write something in our text box it will be the state of our object for that specific point in time. The state is the changeable variable of our app. Whenever the state object changes, the component re-render itself.
+Q7:What is Hook in React?
+ Hook allows you to use state and other react features with a function-based component,  that is without writing a class.
+
+Q8:What is Use State?
+ It is the type of hook in react which allows us to use state variables in the function-based components.
+
+Q9:What is Real Dom?
+  DOM stands for “Document Object Model”. The DOM in simple words represents the UI of your application. Everytime there is a change in the state of your application UI, the DOM gets updated to represent that change. Now the catch is frequently manipulating the DOM affects performance, making it slow
+
+Q9:What is Real Dom?
+ The virtual DOM is only a virtual representation of the DOM. Everytime the state of our application changes, the virtual DOM gets updated instead of the real DOM.
+
+Q10:How is Virtual Dom Faster?
+ When new elements are added to the UI, a virtual DOM, which is represented as a tree is created. Each element is a node on this tree. If the state of any of these elements changes, a new virtual DOM tree is created. This tree is then compared or “diffed” with the previous virtual DOM tree. Once this is done, the virtual DOM calculates the best possible method to make these changes to the real DOM. This ensures that there are minimal operations on the real DOM. Hence, reducing the performance cost of updating the real DOM.
+
+Q10:How React use Virtual Dom?
+ In React every UI piece is a component, and each component has a state. React follows the observable pattern and listens for state changes. When the state of a component changes, React updates the virtual DOM tree. Once the virtual DOM has been updated, React then compares the current version of the virtual DOM with the previous version of the virtual DOM. This process is called “diffing”.
+Once React knows which virtual DOM objects have changed, then React updates only those objects, in the real DOM. This makes the performance far better when compared to manipulating the real DOM directly. This makes React standout as a high performance JavaScript library.
+
+
