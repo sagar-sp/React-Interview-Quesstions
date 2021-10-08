@@ -14,7 +14,7 @@ Thanks for giving me the opportunity to introduce myself.
 
 
 
-OOPS Concepts In JS
+OOPS Concepts
 1. Object  
 	 An Object is a unique entity which contains property and methods. For example “car” is a real life Object, which have some characteristics like color, type, model, horsepower and performs certain action like drive. The characteristics of an Object are called as Property, in Object Oriented Programming and the actions are called methods. An Object is an instance of a class. Objects are everywhere in JavaScript almost every element is an Object whether it is a function,arrays and string.
 Example Object 
@@ -36,7 +36,6 @@ landline:'6789'
 }
 console.log(person.getFunction());
 console.log(person.phone_number.landline);
-
 
 2.Class
 Classes are blueprint of an Object. A class can have many Object, because class is a template while Object are instances of the class or the concrete implementation.
@@ -60,7 +59,6 @@ console.log(bike1.name);    // Hayabusa
 console.log(bike2.maker);   // Kawasaki
 console.log(bike1.getDetails());
 
-
 3. Encapsulation
 	Binding Characteristics(data, variables) and behavior(methods, function) together is called as class.
 Example Encapsulation 
@@ -81,7 +79,6 @@ console.log(`Name is ${this.name},Address is: ${this.add}`);
 let person1 = new person('Mukul',21);
 person1.add_Address('Delhi');
 person1.getDetails();
-
 
 4. Abstraction
 	Hiding Something(anything ex :- Characteristics, behavior, Implementation details) from the Outside World is called as Abstraction.
@@ -105,7 +102,6 @@ let person1 = new person('Mukul','Latiyan');
 console.log(person1.firstname);
 console.log(person1.getDetails_noaccess);
 console.log(person1.getDetails_access());
-
 
 5. Inheritance (Reusablility)
 	 It is a concept in which some property and methods of an Object is being used by another Object. Unlike most of the OOP languages where classes inherit classes, JavaScript Object inherits Object i.e. certain features (property and methods)of one object can be reused by other Objects. 
@@ -133,10 +129,8 @@ return (`${super.toString()},Student ID: ${this.id}`);
 let student1 = new student('Mukul',22);
 console.log(student1.toString());
 
-
 5. Polymorphism
 Single Name And Multiple Behaviours is called as Polymorphism
-
 
 React Interview Questions
 Q1: How does React work?
@@ -145,8 +139,9 @@ Q1: How does React work?
 Q2: What are the advantages of ReactJS? 
  1. Increases the application’s performance with Virtual DOM.
   2. JSX makes code is easy to read and write.
-  3. Easy to integrate with other frameworks (Angular, BackboneJS) since it is only a          view library.
-  4.Reusable components : -React uses component-based architecture for developing applications. Components are independent and reusable bits of code. These components can be shared across various applications having similar functionality. The re-use of components increases the pace of development.
+        3. Easy to integrate with other frameworks (Angular, BackboneJS) since it is only a          view library.
+        4.Reusable components : -
+React uses component-based architecture for developing applications. Components are independent and reusable bits of code. These components can be shared across various applications having similar functionality. The re-use of components increases the pace of development.
 
 Q.3: What is jsx?
   JSX stands for JavaScript XML.
@@ -176,8 +171,39 @@ Q9:What is Real Dom?
 Q10:How is Virtual Dom Faster?
  When new elements are added to the UI, a virtual DOM, which is represented as a tree is created. Each element is a node on this tree. If the state of any of these elements changes, a new virtual DOM tree is created. This tree is then compared or “diffed” with the previous virtual DOM tree. Once this is done, the virtual DOM calculates the best possible method to make these changes to the real DOM. This ensures that there are minimal operations on the real DOM. Hence, reducing the performance cost of updating the real DOM.
 
-Q10:How React use Virtual Dom?
+
+Q11:How React use Virtual Dom?
  In React every UI piece is a component, and each component has a state. React follows the observable pattern and listens for state changes. When the state of a component changes, React updates the virtual DOM tree. Once the virtual DOM has been updated, React then compares the current version of the virtual DOM with the previous version of the virtual DOM. This process is called “diffing”.
 Once React knows which virtual DOM objects have changed, then React updates only those objects, in the real DOM. This makes the performance far better when compared to manipulating the real DOM directly. This makes React standout as a high performance JavaScript library.
 
+Q12 :Differentiate between RealDom and Virtual Dom?
+ Real Dom :--
+1.	It updates slow.
+2.	 Can directly update HTML.
+3.	Creates a new DOM if element updates.
+4.	DOM manipulation is very expensive.
+5.	Too much of memory wastage.
 
+   Virtual Dom :--
+1.	 It updates faster.
+2.	 Can’t directly update HTML.
+3.	 Updates the JSX if element updates.
+4.	DOM manipulation is very easy.
+5.	 No memory wastage.
+
+Q13 :What Is React?
+ React is a front-end JavaScript library developed by Facebook in 2011. It follows the component based approach which helps in building reusable UI components. It is used for developing complex and interactive web and mobile UI. Even though it was open-sourced only in 2015, it has one of the largest communities supporting it.
+
+Q14 :What are the feature of React?
+ Major features of React are listed below:
+It uses the virtual DOM instead of the real DOM.
+It uses server-side rendering.
+It follows uni-directional data flow or data binding.
+
+Q15 :List some of the major advantages of React?
+ Some of the major advantages of React are:-- It increases the application’s performance. It can be conveniently used on the client as well as server side. Because of JSX, code’s readability increases. React is easy to integrate with other frameworks like Meteor, Angular, etc. Using React, writing UI test cases become extremely easy.
+
+Q16 : What do you understand by virtual Dom? Explain its Working ?
+ A virtual DOM is a lightweight JavaScript object which originally is just the copy of the real DOM. It is a node tree that lists the elements, their attributes and content as Objects and their properties. React’s render function creates a node tree out of the React components. It then updates this tree in response to the mutations in the data model which is caused by various actions done by the user or by the system.
+
+ 
